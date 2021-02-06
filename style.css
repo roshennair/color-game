@@ -1,0 +1,85 @@
+body {
+    background: #232323;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    background-color: steelblue;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 0; 
+    font-weight: normal;
+    /* If line-height is set to a number, it is multiplied by its own font size */
+    line-height: 1.1;
+    /* Here, transition is only targetting background-color property changes instead of all state changes */
+    transition: background-color 0.6s;
+}
+
+#colorDisplay {
+    display: block;
+    font-size: 200%
+}
+
+#stripe {
+    background-color: #ffffff;
+    height: 30px;
+    text-align: center;
+}
+
+button {
+    border: none;
+    background-color: #ffffff;
+    color: steelblue;
+    text-transform: uppercase;
+    /* Increases from button's default (13px) to body's default (16px) */
+    font-size: inherit;
+    font-weight: 700;
+    letter-spacing: 1px;
+    /* 100% of parent div's height */
+    height: 100%;
+    /* The transition property tells CSS to define a transition between 2 states of an element. */ 
+    /* Here, it means that all button state changes e.g. color changes will take place over duration of 0.3s */
+    transition: all 0.3s;
+}
+
+button:focus {
+    /* Removes blue outline when button is in focus */
+    outline: none;
+}
+
+button:hover {
+    background-color: steelblue;
+    color: #ffffff;
+}
+
+.selected {
+    background-color: steelblue;
+    color: #ffffff;
+}
+
+#message {
+    /* We set its display to inline-block because it behaves like display inline but it also allows us to set width/height */
+    display: inline-block;
+    width: 20%;
+}
+
+#container {
+    max-width: 600px; /* Width won't extend beyond 600px */
+    margin: 20px auto; /* Centers it within parent container */
+}
+
+.square {
+    background: #800080;
+    width: 30%; /* 30% of parent div, 3 squares in a row */
+    /* Any padding set to a percentage is calculated based on the width of the parent element */
+    padding-bottom: 30%; /* Apparent height equal to the width */
+    /* float places an element on left/right side of its container, allowing text, inline elements and other floated elements to wrap around it */
+    float: left; /* Allows squares to be next to one another */
+    margin: 1.66%; /* Divides margin evenly (10% / 6) */
+    /* border-radius set to 50% on all corners curves into a full circle */
+    border-radius: 15%;
+    transition: background-color 0.6s;
+}
